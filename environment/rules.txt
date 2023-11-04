@@ -1,0 +1,51 @@
+reglas_unificadas = {
+    Aritmética : {
+        # Reglas para Aritmética básica (Nivel de dificultad bajo)
+        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 80%.",
+        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 70%.",
+        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 60%.",
+        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 75%.",
+        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 85%.",
+        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 75%.",
+    },
+
+    roporciones : {
+         # Reglas para Problemas de proporciones (Nivel de dificultad medio)
+        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 85%.",
+        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 75%.",
+        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 65%.",
+        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 70%.",
+        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 80%.",
+        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 70%.",
+    },
+
+    Geometría : {
+        # Reglas para Geometría básica (Nivel de dificultad medio-alto)
+        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 90%.",
+        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 75%.",
+        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 70%.",
+        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 80%.",
+        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 85%.",
+        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 80%.",
+    },
+
+    Porcentajes : {
+        # Reglas para Problemas de porcentajes (Nivel de dificultad alto)
+        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 85%.",
+        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 80%.",
+        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 75%.",
+        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 85%.",
+        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 90%.",
+        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 90%.",
+    },
+
+    Tiempo-Velocidad : {
+        # Reglas para Problemas de tiempo y velocidad (Nivel de dificultad alto)
+        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 95%.",
+        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 80%.",
+        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 70%.",
+        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 80%.",
+        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 90%.",
+        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 85%.",
+    }
+}

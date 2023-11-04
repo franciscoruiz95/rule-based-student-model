@@ -1,0 +1,63 @@
+"""
+    Existen seis tipos de emociones según Eckman
+        1 : Felicidad
+        2 : Triste
+        3 : Miedo
+        4 : Asco
+        5 : Ira
+        6 : Sorpresa
+""" 
+
+"""
+    Tenemos cinco categorias en el cuestionario
+        1 :Aritmética
+        2 :proporciones
+        3 :Geometría
+        4 :Porcentajes
+        5 :Tiempo-Velocidad
+"""
+
+Rules = {
+    "felicidad":{
+        "aritmetica":       "Si un estudiante está feliz, la probabilidad de responder correctamente es del 80%.",
+        "geometria":        "Si un estudiante está feliz, la probabilidad de responder correctamente es del 85%."
+        "proporciones":     "Si un estudiante está feliz, la probabilidad de responder correctamente es del 90%.",
+        "porcentajes":      "Si un estudiante está feliz, la probabilidad de responder correctamente es del 85%.",
+        "tiempo_velocidad": "Si un estudiante está feliz, la probabilidad de responder correctamente es del 95%.",
+    },
+    "tristeza":{
+        "aritmetica":       "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 70%.",
+        "geometria":        "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 75%.",
+        "proporciones":     "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 75%.",
+        "porcentajes":      "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 80%.",
+        "tiempo_velocidad": "Si un estudiante está triste, la probabilidad de responder incorrectamente es del 80%.",
+    },
+    "miedo":{
+        "aritmetica":       "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 60%.",
+        "geometria":        "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 65%.",
+        "proporciones":     "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 70%.",
+        "porcentajes":      "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 75%.",
+        "tiempo_velocidad": "Si un estudiante está asustado, la probabilidad de responder incorrectamente es del 70%.",
+    },
+    "asco":{
+        "aritmetica":       "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 75%.",
+        "geometria":        "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 70%.",
+        "proporciones":     "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 80%.",
+        "porcentajes":      "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 85%.",
+        "tiempo_velocidad": "Si un estudiante siente asco, la probabilidad de responder incorrectamente es del 80%.",
+    },
+    "ira":{
+        "aritmetica":       "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 85%.",
+        "geometria":        "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 80%.",
+        "proporciones":     "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 85%.",
+        "porcentajes":      "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 90%.",
+        "tiempo_velocidad": "Si un estudiante está enojado, la probabilidad de responder incorrectamente es del 90%.",
+    },
+    "sorpresa":{
+        "aritmetica":       "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 75%.",
+        "geometria":        "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 70%.",
+        "proporciones":     "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 80%.",
+        "porcentajes":      "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 90%.",
+        "tiempo_velocidad": "Si un estudiante está sorprendido, la probabilidad de responder correctamente es del 85%.",
+    }
+}

@@ -1,12 +1,15 @@
 import gym
 from gym import spaces
 import numpy as np
-from rules_based_on_numbers import RBOnNumbers as Rules
+from environment.rules_based_on_numbers import RBOnNumbers as Rules
 
 # Crear el modelo de estudiante basado en reglas
 class RuleBasedStudentModel(gym.Env):
     def __init__(self):
         super().__init__()
+        self.action = 0
+        self.reward = 0.0
+        self.state = 0
         #Reglas difinidas para calcular la recompensa
         self.P = Rules()
 
@@ -16,19 +19,27 @@ class RuleBasedStudentModel(gym.Env):
         # Observaciones: 6 emociones {0 : Felicidad, 1 : Triste, 2 : Miedo, 3 : Asco, 4 : Ira, 5 : Sorpresa}
         self.observation_space = spaces.Discrete(6)
 
-    def step(self, action, emotion):
-        response, probability = self.P[emotion][action]
+    def step(self, action):
+        response, probability = self.P[self.state][action]
         if response == 1:
             # Respuesta correcta
-            reward = np.random.choice([0, 1], p=[1 - probability, probability])
+            self.reward = np.random.choice([0, 1], p=[1 - probability, probability])
         else:
             # Respuesta incorrecta
-            reward = np.random.choice([0, 1], p=[probability, 1 - probability])
+            self.reward = np.random.choice([0, 1], p=[probability, 1 - probability])
 
-        return reward, probability, False, {}  # Devolver recompensa y probabilidad
+        self.state = np.random.randint(6) # Emoción/estado aleatoria
+        self.action = action
+        self.render()
+        return self.state, self.reward , False, False, {}  # Devolver observación, recompensa
 
-    def reset(self):
-        action = np.random.randint(5)  # Acción aleatoria
-        emotion = np.random.randint(6)  # Emoción aleatoria
+    def reset(self, seed=None, options=None):
+        super().reset(seed=seed)
+        self.action = 0
+        self.reward = 0.0
+        self.state = np.random.randint(6)  # Emoción/estado aleatoria
 
-        return action, emotion  # Estado inicial aleatorio
+        return self.state, {}  # Estado inicial aleatorio
+
+    def render(self):
+        print(f"State: {self.state}, Action: {self.action}, Reward: {self.reward}")

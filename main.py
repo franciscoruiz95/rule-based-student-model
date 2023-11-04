@@ -17,10 +17,10 @@ def graphic(values):
     max_values = np.max(matrix, axis=1)
 
     # Crear una lista de acciones para el eje x
-    acciones = ['Acción 1', 'Acción 2', 'Acción 3', 'Acción 4', 'Acción 5']
+    acciones = ['Aritmética', 'proporciones', 'Geometría', 'Porcentajes', 'Tiempo-Velocidad']
 
     # Crear una lista de emociones para el eje y
-    emociones = ['Emoción 1', 'Emoción 2', 'Emoción 3', 'Emoción 4', 'Emoción 5', 'Emoción 6']
+    emociones = ['Felicidad', 'Triste', 'Miedo', 'Asco', 'Ira', 'Sorpresa']
 
     # Asignar colores para cada emoción
     colores = ['cyan', 'grey', 'magenta', 'blue', 'red', 'yellow']
@@ -31,8 +31,8 @@ def graphic(values):
         # plt.text(acciones[max_indices[i]], max_values[i] + 0.05, f"{max_values[i]:.2f}", ha='center')
 
     plt.xlabel('Acciones')
-    plt.ylabel('Probabilidad')
-    plt.title('Acciones con puntaje más alto por emoción')
+    plt.ylabel('Puntaje según Q-learning')
+    plt.title('Acciones con puntaje más alto por cada emoción')
     plt.legend()
     plt.show()
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     observation, _ = env.reset()
     
     for _ in range(iterations):
-        action = agent.get_action(observation, "random")
+        action = agent.get_action(observation, "epsilon-greedy")
         new_observation, reward, terminated, _, _ = env.step(action)
         agent.update(observation, action, new_observation, reward, terminated)
         observation = new_observation

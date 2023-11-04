@@ -30,7 +30,7 @@ class RuleBasedStudentModel(gym.Env):
 
         self.state = np.random.randint(6) # Emoción/estado aleatoria
         self.action = action
-        self.render()
+        # self.render()
         return self.state, self.reward , False, False, {}  # Devolver observación, recompensa
 
     def reset(self, seed=None, options=None):

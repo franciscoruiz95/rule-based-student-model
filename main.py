@@ -22,4 +22,8 @@ if __name__ == "__main__":
         new_observation, reward, terminated, _, _ = env.step(action)
         agent.update(observation, action, new_observation, reward, terminated)
         observation = new_observation
+        agent.render('step')
+        agent.render()
+
+        print('*************************************************************')
 

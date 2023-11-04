@@ -4,7 +4,7 @@ from gym.envs.registration import register
 
 register(
     id="RBStudentModel-v0",
-    entry_point='environment.RuleBasedStudentModel:RBStudentModel'
+    entry_point='environment.RuleBasedStudentModel:RuleBasedStudentModel'
 )
 
 (RBStudentModel,)

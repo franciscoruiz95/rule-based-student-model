@@ -1,4 +1,4 @@
-reglas_unificadas = {
+Rules = {
     Aritmética : {
         # Reglas para Aritmética básica (Nivel de dificultad bajo)
         "Si un estudiante está feliz, la probabilidad de responder correctamente es del 80%.",

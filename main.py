@@ -48,7 +48,7 @@ if __name__ == "__main__":
     observation, _ = env.reset()
     
     for _ in range(iterations):
-        action = agent.get_action(observation, "epsilon-greedy")
+        action = agent.get_action(observation, "random")
         new_observation, reward, terminated, _, _ = env.step(action)
         agent.update(observation, action, new_observation, reward, terminated)
         observation = new_observation
